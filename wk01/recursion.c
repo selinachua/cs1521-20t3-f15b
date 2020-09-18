@@ -18,9 +18,17 @@ int main(void)
 
 #include <stdio.h>
 
-
+// print_array(nums, 10)
 void print_array(int *nums, int i) {
     // TODO: Fill this function.
+    // 1. Base case
+    if (i >= 10) {
+        return;
+    // 2. Recursive case
+    } else {
+        printf("%d\n", nums[i]);
+        print_array(nums, i + 1);
+    }
 }
 
 int main(void) {
