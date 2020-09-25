@@ -1,0 +1,38 @@
+1 byte = 8 bits 
+
+Show what the following decimal values look like in 
+8-bit binary, 3-digit octal, and 2-digit hexadecimal:
+
+int = 4 bytes = 32 bits 
+0000 ... 0001
+1111 ... 1111
+
+1
+binary: 0000 0001
+octal:  001
+hexa:   0x01
+
+8
+binary: 0000 1000
+octal:  010
+hexa:   0x08
+
+10
+
+15
+
+16
+
+100
+binary: 0110 0100
+octal:  144
+hexa:   0x64
+
+127
+binary: 0111 1111
+octal:  177
+hexa:   0x7F
+
+1000 << 3
+
+200
