@@ -1,0 +1,8 @@
+uint32_t -> int that always has exactly 32 bits
+uint16_t -> int that always has exactly 16 bits 
+
+TWO'S COMPLEMENT:
+a way to represent negative numbers
+
+0000 1010 0111 1100 -> positive 
+1001 0101 0001 1010 -> negative 
