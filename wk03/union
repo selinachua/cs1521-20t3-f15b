@@ -7,8 +7,6 @@ struct overlay var1;
 var1.f = 2.5;
 var1.u = 10;
 
-struct overlay var1:
-
 printf("%f\n", var1.f); // 2.5
 printf("%d\n", var1.u); // 10
 

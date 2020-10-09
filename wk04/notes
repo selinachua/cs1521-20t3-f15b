@@ -1,0 +1,47 @@
+##### MIPS #####
+Registers
+$zero -> 0
+
+return sum; -> value of sum in $v0
+
+int add(int x, int y) -> x in $a0, y in $a1
+
+int num; -> $t, $s
+
+Instructions
+$t2 = $t0 + $t1
+add     $t2, $t0, $t1
+
+LOADING INSTRUCTIONS 
+1. Loading an immediate value (1, 2, 3, 4, 'a')
+li  $t0, 'a'
+
+2. Loading from an address 
+la  $t0, prompt
+
+3. Loading from another register $t0 = $t1 
+move    $t0, $t1
+
+
+
+###### RECAP #######
+Q3. Two's complement of 0111
+0111 -> +7
+1001 -> -7
+1. Flip all the bits -> 1000
+2. Add one -> 1001
+
+0001 -> +1
+1111 -> -1
+1. Flip  -> 1110
+2. Add 1 -> 1111
+
+Q7. 0 0111111 100...000
+sign = 0
+exp  = 127
+fraction = 2^-1 = 1/2 = 0.5
+
+(-1^sign) * (1 + fraction) * 2^(exp - 127)
+(-1^0) * (1 + 0.5) * 2^(127 - 127)
+= 1 * 1.5 * 1
+= 1.5
