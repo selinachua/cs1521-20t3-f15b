@@ -4,18 +4,23 @@ the name of a file, and which reads a line from stdin, and writes it to the
 specified file; if the file exists, it should be overwritten.
 */
 
-#include <stdio.h>
 
-int main(int argc, char **argv) {
-    FILE *fp = fopen("text.txt", "w");
-    if (fp == NULL) {
-        perror("text.txt");
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    FILE *stream = fopen(argv[1], "w");
+    if (stream == NULL) {
+        fprintf(stderr, "Failed to open %s.\n", argv[1]);
+        exit(1);
     }
-    int c;
-    while ((c = fgetc(stdin)) != '\n') {
-        fputc(c, fp);
+
+    char ch;
+    while ((ch = fgetc(stdin)) != '\n') {
+        fputc(ch, stream);
     }
-    fclose(fp);
+
+    fclose(stream);
 
     return 0;
 }

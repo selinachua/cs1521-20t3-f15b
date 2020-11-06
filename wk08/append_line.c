@@ -1,16 +1,22 @@
 
 #include <stdio.h>
 
-int main(int argc, char **argv) {
-    FILE *fp = fopen("text.txt", "a");
-    if (fp == NULL) {
-        perror("text.txt");
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    FILE *stream = fopen(argv[1], "a");
+    if (stream == NULL) {
+        fprintf(stderr, "Failed to open %s.\n", argv[1]);
+        exit(1);
     }
-    int c;
-    while ((c = fgetc(stdin)) != EOF) {
-        fputc(c, fp);
+
+    char ch;
+    while ((ch = fgetc(stdin)) != '\n') {
+        fputc(ch, stream);
     }
-    fclose(fp);
+
+    fclose(stream);
 
     return 0;
 }

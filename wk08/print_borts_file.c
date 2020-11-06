@@ -33,6 +33,23 @@ void print_borts_file(char *pathname) {
 
 // read an unsigned two-byte big-endian integers from stream f
 // return integer or EOF
+
+// 10101010 01010101
+//    A        B
+// ret = 00000000 00000000 10101010 01010101
+
+// byte0 = 10101010
+// byte1 = 01010101
 int get_bort(FILE *f) {
-    // TODO
+    // Reading byte A
+    int byte0 = fgetc(f);
+    if (byte0 == EOF) {
+        return EOF;
+    }
+    // Reading byte B
+    int byte1 = fgetc(f);
+    if (byte1 == EOF) {
+        return EOF;
+    }
+    return (byte0 << 8) | byte1;
 }
