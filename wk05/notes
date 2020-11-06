@@ -1,0 +1,16 @@
+statically allocated memory = memory that is allocated at compile time
+- global and static variables
+- arrays (not the ones that are malloced) 
+    e.g. int array[10] = {0};
+- strings 
+
+compile a c program -> assembly -> executable (a.out)
+
+ __________
+|          |    
+| Memory   |   
+ ----------
+
+1. Load the value / variable from memory into a register 
+2. Modify the value 
+3. Save the value back into memory 
