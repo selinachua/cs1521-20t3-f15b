@@ -1,0 +1,25 @@
+------RECAP
+fopen() and open() -> open a file 
+
+open -> a system call
+fopen -> a libary function
+
+FILE *fopen(char *pathname, char *mode) {
+    // error checks 
+    if (mode != ... || ...) {
+        // print error to stderr
+    }
+    open(pathname, ...);
+    ...
+    return ...;
+}
+
+fopen(path, "w") 
+open(path, )
+
+O_APPEND -> 00001
+O_CREAT  -> 00010
+O_TRUNC  -> 00100
+
+O_APPEND | O_CREAT | O_TRUNC -> 00111
+
